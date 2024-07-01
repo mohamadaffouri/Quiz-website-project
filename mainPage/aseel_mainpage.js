@@ -35,7 +35,7 @@ function logOut(){
   sessionStorage.removeItem('userName');
   usrediv.style.display="none";
   logout.style.display="none";
-
+ alert("You have been successfully logged out!");
 }
 // fajer - youtube page 
 
