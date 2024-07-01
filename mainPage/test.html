@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InterviewPrep - Quizzes & Practice</title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="test.css" />
+    <script
+      src="https://kit.fontawesome.com/5009c5b097.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+  
+    <!-- Fajer - Main banner -->
+    <!-- <nav class="navbar navbar-expand-lg navbar fixed-top"> -->
+      <!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg  pg-transparen fixed-top navbar">
+  <div class="container-fluid">
+      <a class="navbar-brand fs-4" href="#">QuizZes</a>
+      <button class="navbar-toggler shadow-non border-0" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+           aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header text-white border-bottom ">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">QuizZes</h5>
+              <button type="button" class="btn-close btn-close-white shadow-non" data-bs-dismiss="offcanvas"
+                      aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body ">
+              <ul class="navbar-nav justify-content-center fs-5 flex-grow-1 pe-3 ">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#FAhome">Home</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                      <a class="nav-link" href="#AS_aboutuslink">About</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                      <a class="nav-link" href="#quizSessions">Our Quizzes</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                      <a class="nav-link" href="#AS_Contactlink">contact</a>
+                  </li>
+              </ul>
+              <div class="auth d-flex justify-content-center align-items-center gap-3">
+                  
+                  <a href="#signup"
+                     class="text-white text-decoration-none px-3 py-1 rounded-4"
+                     style="background-color: #3f4868;" id="logOut" onclick="logOut()">log out</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</nav>
+<!-- End Navigation Bar -->
+  
+
+  <section class="Fahome section" id="FAhome">
+      <div class="Faubadge" id="Faubadge" style=" font-size: 1.5rem; color: #39426b;"></div>
+      <div class="Fahome-text">
+          <span>Welcome To</span>
+          <h1>Interview Mastery</h1>
+          <p>Interview Mastery is your premier resource for acing every interview. Explore a comprehensive collection of common questions and expert tips to ensure you shine in every opportunity.</p>
+          <button class="FAbtn" onclick="window.location.href='#quizSessions' ">Start Now</button>
+      </div>
+  </section>
+
+  <section class="Favid section" id="Favid">
+      <div class="Fayou">
+          <h2>Learn More About Interview Mastery</h2>
+          <p>Watch the video to learn interview success strategies and how to answer common questions skillfully.</p>
+      </div>
+      <div class="Fa" id="Fa-video-container">
+      </div>
+  </section>
+ 
+    <!-- ASEEL - main hero banner -->
+
+    <section class="AS_mainHero section">
+      <div class="AS_mainHero-content">
+        <!-- <h1>Welcome to InterviewPrep</h1> -->
+        <p>
+          Master your interviews with our comprehensive practice tests and
+          expert guidance.
+        </p>
+        <p>Your journey to mastering personal interviews starts here.</p>
+        <p>
+          Practice with our extensive collection of mock interviews, tailored
+          tests, and expert advice to boost your confidence and land your dream
+          job.
+        </p>
+      </div>
+    </section>
+
+    <!-- ASEEL - Main sections -->
+
+    <div class="container" id="quizSessions">
+      <!-- ASEEL - Quiz section  -->
+
+      <div id="AS_quizuslink" class="AS_quiz-intro">
+        <h2 >Our Quizzes</h2>
+        <p>Boost your skills with our carefully curated quizzes.</p>
+      </div>
+      <section class="AS_quiz">
+        <div class="AS_quizContainer">
+
+
+          <div class="AS_card">
+            <div class="AS_QuizThumbnail1"></div>
+            <div class="AS_container">
+              <h4 class="AS-QuizTitle"><b>Technical Skills Quiz</b></h4>
+              <p>
+                Test your technical knowledge in various domains such as coding,
+                algorithms, and data structures.
+              </p>
+              <button class="AS_quizBtn" id="1" value="Technical_Skills_Quiz"  onclick="checkButton(this.value)">Start the quiz</button>
+            </div>
+          </div>
+
+
+          <div class="AS_card">
+            <div class="AS_QuizThumbnail2"></div>
+            <div class="AS_container">
+              <h4 class="AS-QuizTitle"><b>Behavioral Skills Quiz</b></h4>
+              <p>
+                Prepare for HR rounds with questions on communication, teamwork,
+                and problem-solving.
+              </p>
+              <button class="AS_quizBtn" id="2" value="Behavioral_Skill_Quiz"  onclick="checkButton(this.value)">Start the quiz</button>
+            </div>
+          </div>
+
+
+          <div class="AS_card">
+            <div class="AS_QuizThumbnail3"></div>
+            <div class="AS_container">
+              <h4 class="AS-QuizTitle"><b>Mock Interview</b></h4>
+              <p>
+                Simulate real interview scenarios with our comprehensive mock
+                interview quiz.
+              </p>
+              <button class="AS_quizBtn" id="3"  value="Mock_Interview"  onclick="checkButton(this.value)">Start the quiz</button>
+            </div>
+          </div>
+
+          <div class="AS_card">
+            <div class="AS_QuizThumbnail4"></div>
+            <div class="AS_container">
+              <h4 class="AS-QuizTitle"><b>Company-Specific Quiz</b></h4>
+              <p>
+                Practice with questions specific to top tech companies like
+                Google, Amazon, and Facebook.
+              </p>
+              <button class="AS_quizBtn" id="4" value="Company_Specific_Quiz"  onclick="checkButton(this.value)">Start the quiz</button>
+            </div>
+          </div>
+
+          <div class="AS_card">
+            <div class="AS_QuizThumbnail5"></div>
+            <div class="AS_container">
+              <h4 class="AS-QuizTitle"><b>Industry Knowledge Quiz</b></h4>
+              <p>
+                Enhance your knowledge of industry trends and technologies with
+                our curated quizzes.
+              </p>
+              <button class="AS_quizBtn" id="5" value="Industry_Knowledge_Quiz"  onclick="checkButton(this.value)">Start the quiz</button>
+            </div>
+          </div>
+          <div class="AS_card">
+            <div class="AS_QuizThumbnail6"></div>
+            <div class="AS_container">
+              <h4 class="AS-QuizTitle"><b>Personality Assessment</b></h4>
+              <p>
+                Understand your strengths and weaknesses with our personality
+                assessment quizzes.
+              </p>
+              <button class="AS_quizBtn" id="6" value="Personality_Assessment"  onclick="checkButton(this.value)">Start the quiz</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ASEEL - Newsletter hero banner -->
+
+    <section class="AS_newsletterHero section">
+      <div class="AS_newsletterPic"></div>
+      <div class="AS_newsletter-content">
+        <h2>Stay Updated!</h2>
+        <p>
+          Subscribe to our newsletter for the latest interview tips and updates.
+        </p>
+        <form class="AS_newsletter-form">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="AS_form-input"
+            required
+          />
+          <button type="submit" class="AS_submit-button">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ASEEL - About us section  -->
+
+    <div id="AS_aboutuslink section" class="container">
+      <div class="AS_containerAbout">
+        <section class="AS_about-us">
+          <div class="AS_image-section"></div>
+          <div class="AS_content-section">
+            <h2>About Us</h2>
+            <h3>Preparing you for success in your career journey.</h3>
+            <p>
+              At InterviewPrep, we provide comprehensive resources and tools to
+              help you ace your interviews and secure your dream job. Our
+              platform offers a variety of quizzes designed to test and enhance
+              your technical and behavioral skills.
+            </p>
+            <div class="AS_accordion">
+              <div class="AS_accordion-item">
+                <input
+                  type="checkbox"
+                  id="AS_accordion1"
+                  class="AS_accordion-checkbox"
+                />
+                <label for="AS_accordion1" class="AS_accordion-button"
+                  >Our Mission</label
+                >
+                <div class="AS_accordion-content">
+                  <p>
+                    Our mission is to provide a robust platform that bridges the
+                    gap between knowledge and practical application, helping you
+                    to be interview-ready.
+                  </p>
+                </div>
+              </div>
+              <div class="AS_accordion-item">
+                <input
+                  type="checkbox"
+                  id="AS_accordion2"
+                  class="AS_accordion-checkbox"
+                />
+                <label for="AS_accordion2" class="AS_accordion-button"
+                  >Our Vision</label
+                >
+                <div class="AS_accordion-content">
+                  <p>
+                    We envision a world where every job seeker is confident and
+                    well-prepared to tackle any interview, thanks to our
+                    targeted and comprehensive preparation tools.
+                  </p>
+                </div>
+              </div>
+              <div class="AS_accordion-item">
+                <input
+                  type="checkbox"
+                  id="AS_accordion3"
+                  class="AS_accordion-checkbox"
+                />
+                <label for="AS_accordion3" class="AS_accordion-button"
+                  >Our Values</label
+                >
+                <div class="AS_accordion-content">
+                  <p>
+                    We value integrity, commitment, and continuous learning.
+                    These values are reflected in the quality of our content and
+                    our dedication to helping you succeed.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- ASEEL - Contact section -->
+
+    <section id="AS_Contactlink section" class="AS_theContactSection">
+      <div class="container">
+        <div class="AS_containerContact">
+          <div class="AS_left-section">
+            <h2>Contact Us</h2>
+            <p>Schedule Your Interview</p>
+            <p>Contact us to arrange a convenient time for your interview.</p>
+            <p>Our team will get back to you promptly to confirm your slot.</p>
+            <p>Limited slots available</p>
+          </div>
+          <div class="AS_right-section">
+            <div class="AS_getInTouch">
+              <h2>Get in Touch</h2>
+              <p>
+                Join us for an interview and take the next step in your career
+                journey.
+              </p>
+              <form class="AS_contact-form" id="contactForm">
+                <input
+                  type="text"
+                  placeholder="Your Full Name"
+                  class="AS_form-input"
+                  id="fullName"
+                  required
+                />
+                <input
+                  type="email"
+                  placeholder="Your Email Address"
+                  class="AS_form-input"
+                  id="email"
+                  required
+                />
+                <input
+                  type="number"
+                  placeholder="Your Phone Number"
+                  class="AS_form-input"
+                  id="phone"
+                  required
+                />
+                <button type="submit" class="AS_submit-button">
+                  Send Us a message!
+                </button>
+              </form>
+            </div>
+            <div class="AS_social-media">
+              <img
+                src="/MainPage/aseel pic/traingle1_141414.png"
+                alt="Triangle 1"
+                class="AS_triangle"
+              />
+              <div class="AS_socialLogoes">
+                <a href="#"><i class="fab fa-google-plus-g"></i></a><br />
+                <a href="#"><i class="fab fa-facebook-f"></i></a><br />
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </div>
+              <img
+                src="/MainPage/aseel pic/traingle2_141414.png"
+                alt="Triangle 2"
+                class="AS_triangle"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popup Modal -->
+    <div id="thankYouModal" class="AS_modal">
+      <div class="AS_modal-content">
+        <div class="AS_popup-body">
+          <img
+            src="https://cdni.iconscout.com/illustration/premium/thumb/newsletter-4828216-4019450.png"
+            alt="Paper Airplane"
+            class="AS_popup-image"
+          />
+        </div>
+        <span class="AS_close-button">&times;</span>
+        <p>Thank you for contacting us! We will get back to you shortly.</p>
+      </div>
+    </div>
+
+    <!-- ASEEL -Footer -->
+
+    <footer class="AS_footer">
+      <div class="AS_footer-container">
+        <div class="AS_footer-column">
+          <h3>Quizzes</h3>
+          <p>
+            InterviewPrep is your go-to platform for mastering your interviews
+            with comprehensive practice tests and expert guidance.
+          </p>
+          <p>© 2024 InterviewPrep</p>
+        </div>
+        <div class="AS_footer-column">
+          <h3>SITEMAP</h3>
+          <ul>
+            <li><a href="#AS_aboutuslink">About us</a></li>
+            <li><a href="#AS_quizuslink">Quizzes</a></li>
+            <li><a href="#AS_Contactlink">Contact us</a></li>
+          </ul>
+        </div>
+        <div class="AS_footer-column">
+          <h3>PRODUCT</h3>
+          <ul>
+            <li><a href="#AS_quizuslink">Technical Skills Quiz</a></li>
+            <li><a href="#AS_quizuslink">Behavioral Skills Quiz </a></li>
+            <li><a href="#AS_quizuslink">Mock Interview </a></li>
+            <li><a href="#AS_quizuslink">Company-Specific Quiz </a></li>
+            <li><a href="#AS_quizuslink">Industry Knowledge Quiz </a></li>
+            <li><a href="#AS_quizuslink">Personality Assessment</a></li>
+          </ul>
+        </div>
+        <div class="AS_footer-column">
+          <h3>HELP</h3>
+          <ul>
+            <li><a href="#">Getting started</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="AS_footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </footer>
+
+    <!-- ASEEL - Pop-up window  -->
+
+    <div id="AS_thankYoupopup" class="AS_popup">
+      <div class="AS_popup-content">
+        <span class="AS_close-btn">&times;</span>
+        <div class="AS_popup-body">
+          <img
+            src="https://cdni.iconscout.com/illustration/premium/thumb/newsletter-4828216-4019450.png"
+            alt="Paper Airplane"
+            class="AS_popup-image"
+          />
+          <h2>Thank You!</h2>
+          <p>
+            We appreciate your interest in InterviewPrep.
+            <br />Your subscription has been confirmed, and you will now receive
+            the latest interview tips, updates, and exclusive content directly
+            in your inbox. Stay tuned and get ready to level up your career :D !
+          </p>
+          <button class="AS_done-btn">Done</button>
+        </div>
+      </div>
+    </div>
+<script>
+  
+</script>
+    <script src="aseel_mainpage.js"></script>
+  </body>
+</html>
