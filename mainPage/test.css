@@ -739,7 +739,10 @@ font-size: 35px;
     color: var(--text-color);
     border: 1px solid #888;
     border-radius: 30px;
-    width: 80%; 
+        /* التعديل */
+    width: 40%; 
+    font-size: 18px;
+
     height: 80vh; 
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     text-align: center;
