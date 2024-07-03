@@ -1,5 +1,6 @@
 
 //-------------------Affouri-----------------
+const logIn= document.getElementById("logIn");
 
 const logout= document.getElementById("logOut");
 const username= sessionStorage.getItem("userName");
@@ -8,7 +9,9 @@ if (username === null || username === '') {
   usrediv.style.display="none";
   logout.style.display="none";
 } else {
+  logIn.style.display="none";
 
+  
   usrediv.textContent="Welcome " + username;
   usrediv.style.display="block";
   logout.style.display="block";
